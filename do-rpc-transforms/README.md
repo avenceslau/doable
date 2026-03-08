@@ -153,6 +153,18 @@ type Env = {
 - `useDOTransforms(MyDO).with(...).method("...").with(...).done()`
 - `TRANSFORM_CALL_ID_CONTEXT_KEY`
 
+## More examples
+
+See `examples/` for ready-to-use recipes, including:
+
+- caller retry
+- caller rate limiting (`better-result`)
+- callee auth guard
+- callee single inflight
+- context observability
+- `better-result` codec
+- caller error boundary
+
 ## Development
 
 ```bash
