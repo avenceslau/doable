@@ -1,0 +1,74 @@
+{
+	"name": "do-rpc-transforms-test",
+	"main": "src/index.ts",
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "COUNTER",
+				"class_name": "CounterDO",
+			},
+			{
+				"name": "TRANSFORMED_COUNTER",
+				"class_name": "TransformedCounterDO",
+			},
+			{
+				"name": "RESULT_DO",
+				"class_name": "ResultDO",
+			},
+			{
+				"name": "METRICS_DO",
+				"class_name": "MetricsDO",
+			},
+			{
+				"name": "SINGLE_FLIGHT_DO",
+				"class_name": "SingleFlightDO",
+			},
+			{
+				"name": "FULL_PIPELINE_DO",
+				"class_name": "FullPipelineDO",
+			},
+			{
+				"name": "INVENTORY_DO",
+				"class_name": "InventoryDO",
+			},
+			{
+				"name": "ORDER_DO",
+				"class_name": "OrderDO",
+			},
+			{
+				"name": "DEMO_DO",
+				"class_name": "DemoDO",
+			},
+		],
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["CounterDO", "TransformedCounterDO"],
+		},
+		{
+			"tag": "v2",
+			"new_classes": ["ResultDO"],
+		},
+		{
+			"tag": "v3",
+			"new_classes": ["MetricsDO"],
+		},
+		{
+			"tag": "v4",
+			"new_classes": ["SingleFlightDO"],
+		},
+		{
+			"tag": "v5",
+			"new_classes": ["FullPipelineDO"],
+		},
+		{
+			"tag": "v6",
+			"new_classes": ["InventoryDO", "OrderDO"],
+		},
+		{
+			"tag": "v7",
+			"new_classes": ["DemoDO"],
+		},
+	],
+}

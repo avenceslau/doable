@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"target": "esnext",
+		"lib": ["esnext"],
+		"moduleResolution": "bundler",
+		"module": "esnext",
+		"types": ["node", "@cloudflare/workers-types/2023-07-01"],
+		"skipLibCheck": true,
+		"tsBuildInfoFile": ".tsbuildinfo"
+	},
+	"include": ["**/*.ts"],
+	"exclude": ["dist", "node_modules", "**/tests/**"]
+}

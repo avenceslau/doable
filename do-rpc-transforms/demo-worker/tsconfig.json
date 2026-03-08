@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"module": "esnext",
+		"target": "esnext",
+		"lib": ["esnext", "webworker"],
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"types": ["@cloudflare/workers-types/2023-07-01"]
+	},
+	"include": ["./src/**/*.ts"]
+}

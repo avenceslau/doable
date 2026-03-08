@@ -1,0 +1,53 @@
+{
+	"name": "@avenceslau/doable",
+	"version": "0.0.0",
+	"description": "Typed caller-side transform pipeline for Durable Object RPC stubs",
+	"homepage": "https://github.com/avenceslau/doable/tree/main/do-rpc-transforms#readme",
+	"bugs": {
+		"url": "https://github.com/avenceslau/doable/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/avenceslau/doable.git",
+		"directory": "do-rpc-transforms"
+	},
+	"license": "MIT OR Apache-2.0",
+	"author": "wrangler@cloudflare.com",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.mts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"check:lint": "eslint . --max-warnings=0 --cache",
+		"check:type": "tsc -p ./tsconfig.json",
+		"demo:dev": "wrangler dev -c demo-worker/wrangler.jsonc",
+		"demo:deploy": "wrangler deploy -c demo-worker/wrangler.jsonc",
+		"test": "vitest",
+		"test:ci": "vitest run && vitest run -c vitest.workers.config.mts",
+		"test:workers": "vitest run -c vitest.workers.config.mts",
+		"type:tests": "tsc -p ./tests/tsconfig.json"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.10.15",
+		"@cloudflare/workers-types": "^4.20260305.0",
+		"@types/node": "^20.19.9",
+		"better-result": "^2.7.0",
+		"eslint": "^9.39.1",
+		"tsup": "8.3.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.2.3",
+		"wrangler": "^4.71.0"
+	},
+	"volta": {
+		"extends": "../../package.json"
+	},
+	"workers-sdk": {
+		"prerelease": true
+	}
+}

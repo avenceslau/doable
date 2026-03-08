@@ -1,0 +1,19 @@
+{
+	"name": "do-rpc-transforms-demo",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-03-07",
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "DEMO_DO",
+				"class_name": "DemoDO"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["DemoDO"]
+		}
+	]
+}
