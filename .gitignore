@@ -11,3 +11,6 @@ dist/
 
 # Generated JS in source trees
 do-rpc-transforms/**/*.js
+
+# Internal docs
+do-rpc-transforms/PITCH.md
